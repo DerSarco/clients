@@ -4,7 +4,7 @@
 
 The Application works only with an API, that you can find [here](https://github.com/sarcowww/clientsApi) exclusive developed for this.
 
-Please, configure the API and then continue with the net steps.
+Please, configure the API and then continue with the next steps.
 
 ## Installation
 
