@@ -1,4 +1,3 @@
-
 import clients from "@/services/clients.js";
 
 export const userFunctions = {
@@ -66,15 +65,18 @@ export const userFunctions = {
                     title: "Confirm",
                     size: "sm",
                     buttonSize: "sm",
-                    okVariant: "accept",
+                    okVariant: "success",
                     okTitle: "Yes",
+                    cancelVariant: "danger",
                     cancelTitle: "No",
                     footerClass: "p-2",
                     hideHeaderClose: false,
                     centered: true,
                 })
-                .then(() => {
-                    this.fetchClientDelete(id)
+                .then((value) => {
+                    if (value) {
+                        this.fetchClientDelete(id)
+                    }
                 })
                 .catch((err) => {
                     console.log(err);
