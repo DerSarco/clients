@@ -134,7 +134,6 @@ export const modalFunctions = {
                   name: this.providerText,
                 };
                 providersService.create(data).then((resp) => {
-                  console.log(resp);
                   if (resp.status === 200) {
                     this.getProviders();
                   }
@@ -163,7 +162,6 @@ export const modalFunctions = {
             .then((value) => {
               if (value) {
                 providersService.delete(id).then((resp) => {
-                  console.log(resp);
                   if (resp.status === 204) {
                     this.getProviders();
                     let index = this.providersSelected.findIndex(

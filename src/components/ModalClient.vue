@@ -9,7 +9,6 @@
     >
       <b-form inline @submit="onSubmit" @reset="onReset" v-if="show">
         <b-form-group
-          class="marginBetween"
           id="input-group-1"
           label="Your Name:"
           label-for="input-2"

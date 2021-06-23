@@ -35,13 +35,15 @@ export const userFunctions = {
         clientFetch() {
             if (this.infoModal.edit) {
                 clients.update(this.form._id, this.form).then((resp) => {
-                    console.log(resp);
-                    this.getClients();
+                    if(resp.status === 200){
+                        this.getClients();
+                    }
                 });
             } else {
                 clients.create(this.form).then((resp) => {
-                    console.log(resp);
-                    this.getClients();
+                    if(resp.status === 200){
+                        this.getClients();
+                    }
                 });
             }
         },
@@ -100,7 +102,6 @@ export const userFunctions = {
         },
         getClients() {
             clients.get().then((resp) => {
-                console.log(resp);
                 this.items = resp.data;
                 this.totalRows = this.items.length;
             });
